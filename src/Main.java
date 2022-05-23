@@ -1,5 +1,3 @@
-import exeption.DivisorAllert;
-
 import java.util.Scanner;
 
 /*
@@ -26,29 +24,14 @@ public class Main {
 
             System.out.println("Please enter a second integer");
             divisor = scanner.nextInt();
-/*
+
             try{
-                result=dividend/divisor;
-                System.out.printf("The division between %d and %d is: %.2f %n",dividend,divisor,result);
-            }catch (DivisorAllert exc){
-                exc.getMessage();
-            }
----------------------------------------------------------------------------------------------------------------------
-*/
-            /*if (divisor==0){
-                throw new DivisorAllert();
-            }else {
-                result=dividend/divisor;
-                System.out.printf("The division between %d and %d is: %.2f %n",dividend,divisor,result);
-            }
-            continue;
----------------------------------------------------------------------------------------------------------------------
-*/
-            try{
-                result=dividend/divisor;
+                result=(dividend/divisor);
                 System.out.printf("The division between %d and %d is: %.2f %n",dividend,divisor,result);
             }catch (Exception exc){
                 System.out.println("Attention it is not possible to divide by zero!");
+            }finally {
+                System.out.println("Try again");
             }
         }
 
